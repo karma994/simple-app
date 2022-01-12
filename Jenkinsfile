@@ -27,15 +27,6 @@ pipeline {
                  repository: 'simpleapp-release', version: '3.0.0'
             }
         }
-        stage('Deploy To Tomcat Server'){
-             when {
-              expression {
-                currentBuild.result == null || currentBuild.result == 'SUCCESS' 
-              }
-            }
-            steps{
-                 sh 'make publish'
-            }
-        }
+         
     }
 }
