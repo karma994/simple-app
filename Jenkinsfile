@@ -27,6 +27,12 @@ pipeline {
                  repository: 'simpleapp-release', version: '3.0.0'
             }
         }
+        stage(''){
+            steps{
+                sh script: "tomcat@172.19.9.29 'rm /var/lib/tomcat9/webapps/target/simple-app-3.0.0.war' "
+                
+            }
+        }
          
     }
 }
